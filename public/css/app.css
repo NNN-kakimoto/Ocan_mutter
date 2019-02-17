@@ -10655,3 +10655,113 @@ a.text-dark:focus {
   }
 }
 
+article {
+  background-color: #e2e2e2;
+}
+
+article #app {
+  width: 960px;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.right {
+  text-align: right;
+}
+
+.symbol {
+  display: inline-block;
+  text-align: center;
+  width: 15px;
+}
+
+header {
+  background-color: #26B7BC;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.336);
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header a,
+header a:hover,
+header a:visited,
+header a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .header_top {
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+header .header_button {
+  display: inline-block;
+  height: 34px;
+  width: 80px;
+  margin: 3px 3px 0 0;
+}
+
+header .header_button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+header .header_button a:active {
+  background-color: #71babd;
+}
+
+footer {
+  margin-top: 10px;
+  padding-top: 20px;
+  background-color: #fff;
+}
+
+footer span {
+  font-size: 0.7rem;
+}
+
+footer .footer_title {
+  text-align: center;
+}
+
+footer .footer_links .footer_link_item {
+  display: inline-block;
+  width: calc( ( 100% - 15px ) / 2 );
+}
+
+.mutter_card {
+  background-color: #fff;
+  margin: 0px 10px 0 10px;
+  min-height: 82px;
+  padding: 20px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.mutter_card .mutter_content {
+  font-size: 1rem;
+}
+
+.mutter_card .mutter_status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mutter_card .mutter_status .mutter_nickname {
+  font-size: 0.7rem;
+}
+
+.mutter_card .mutter_status .mutter_created_at {
+  font-size: 0.7rem;
+}
+
