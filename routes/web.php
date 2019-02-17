@@ -13,10 +13,10 @@
 
 Route::get('/', function () {
 	$mutters = [
-		['nickname' => 'test', 'content' => 'aaaaa'],
-		['nickname' => 'test', 'content' => 'aaaaa'],
-		['nickname' => 'test', 'content' => 'aaaaa'],
-		['nickname' => 'test', 'content' => 'aaaaa'],
+		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
+		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
+		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
+		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
 	];
 	return view('index',[
 		'mutters' => $mutters,
