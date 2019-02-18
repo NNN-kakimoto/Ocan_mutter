@@ -22,3 +22,7 @@ Route::get('/', function () {
 		'mutters' => $mutters,
 	]);
 });
+
+Route::get('/mutter_demo', function(){
+	return view('new');
+});
