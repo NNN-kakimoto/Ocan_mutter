@@ -12,7 +12,8 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+use \App\Mutter;
+Route::get('/mutter/store', function(Request $request){
+	dd($request);
+	return ['status' => '200'];
 });

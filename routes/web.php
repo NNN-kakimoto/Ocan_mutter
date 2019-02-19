@@ -10,14 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use \App\Mutter;
 
 Route::get('/', function () {
-	$mutters = [
-		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
-		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
-		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
-		['nickname' => 'test', 'content' => 'aaaaa', 'created_at' => now()],
-	];
+	$mutters = Mutter::all();
 	return view('index',[
 		'mutters' => $mutters,
 	]);
