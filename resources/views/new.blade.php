@@ -18,7 +18,7 @@
 $(function(){
 	token = '';
 	$.ajax({
-		url : 'http://localhost:8000/csrf_token',
+		url : '/csrf_token',
 		type : "GET",
 		dataType : "json"
 	}).then(function(data){
@@ -37,7 +37,7 @@ $(function(){
 		$(this).addClass('sended').prop('disabled',true);
 		
 		$.ajax({
-			url: 'http://localhost:8000/api/mutter/store',
+			url: '/api/mutter/store',
 			type: "POST",
 			dataType: "json",
 			data: {
