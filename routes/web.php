@@ -13,9 +13,9 @@
 use \App\Mutter;
 
 Route::get('/', function () {
-	//$mutters = Mutter::orderBy('id','desc')->get();
+	$mutters = Mutter::orderBy('id','desc')->get();
 	return view('index',[
-		//'mutters' => $mutters,
+		'mutters' => $mutters,
 	]);
 });
 
