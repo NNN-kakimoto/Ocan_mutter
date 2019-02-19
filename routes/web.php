@@ -13,7 +13,7 @@
 use \App\Mutter;
 
 Route::get('/', function () {
-	$mutters = Mutter::all();
+	$mutters = Mutter::orderBy('id','desc')->get();
 	return view('index',[
 		'mutters' => $mutters,
 	]);
@@ -21,4 +21,9 @@ Route::get('/', function () {
 
 Route::get('/mutter_demo', function(){
 	return view('new');
+});
+Route::get('/csrf_token', function(){
+	return [ 
+		'token' => csrf_token(),
+	];
 });

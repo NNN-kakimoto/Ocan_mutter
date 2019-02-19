@@ -13,7 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 use \App\Mutter;
-Route::get('/mutter/store', function(Request $request){
-	dd($request);
-	return ['status' => '200'];
+Route::post('/mutter/store', function(Request $request){
+	//dd($request);
+	$mutter = new Mutter;
+	$mutter->content = $request->content;
+	$mutter->nickname = $request->nickname;
+	$mutter->created_at = now();
+	// $mutter->save();
+	return [$mutter->save() ];
+});
+Route::get('/csrf_token', function(){
+	return [ 
+		'token' => csrf_token(),
+	];
 });
