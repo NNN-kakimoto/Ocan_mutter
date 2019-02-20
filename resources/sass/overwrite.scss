@@ -2,7 +2,7 @@ article{
 	background-color: #e2e2e2;
 	#app{
 		width: 960px;
-		max-width: 100vw;
+		max-width: 100%;
 		margin:0 auto;
 	}
 } //app
@@ -19,9 +19,11 @@ header{
 	background-color: #26B7BC;
 	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.336);
 	height: 40px;
+	width: 100%;
 	display: flex;
   justify-content: space-between;
 	position: relative;
+	font-size: 1.5rem;
 	a, a:hover, a:visited, a:active{
 		color: #fff;
 		text-decoration: none;
@@ -33,26 +35,49 @@ header{
 		display: inline-block;
 		//width: calc( 100% - 165px );
 	}
+	.header_controller{
+		display: flex;
+		flex-wrap: wrap;
+		padding-right: 10px;
+	} 
 	.header_button{
 		display:inline-block;
-		height:34px;
+		height:40px;
 		width: 80px;
-		margin: 3px 3px 0 0;
+		margin: 0 3px 0 0;
 		a{
 			display: block;
 			width: 100%;
 			height: 100%;
 			margin: 0;
-			padding: 0;
 			font-size: 20px;
-			padding-top: 2px;
+			line-height: 40px;
 			text-align: center;
 			&:active{
 				background-color: #71babd;
 			}
 		}
 	}
-} // header
+} 
+@media screen and (max-width:380px) {
+	header {
+		height: 40px;
+		.header_top{
+			line-height: 40px;
+			font-size: 1.1rem;
+		}
+		.header_button{
+			height: 40px;
+			width: 60px;
+			margin-top: 0;
+			a{
+				padding-top: 0;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+// header
 
 footer{
 	margin-top: 10px;
@@ -82,6 +107,7 @@ footer{
 	// border-radius: 2px;
 	.mutter_content{
 		font-size: 1rem;
+		white-space: pre-line;
 	}
 	.mutter_status{
 		display: flex;
