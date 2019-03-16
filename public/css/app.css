@@ -10849,3 +10849,25 @@ footer .footer_links .footer_link_item {
   color: #fff;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form .nickname_input {
+  width: calc( 100% - 76px ) !important;
+}
+
+form .send {
+  display: inline-block;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 2px;
+  background-color: #26B7BC;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  height: 32px;
+  margin-left: 2px;
+}
+
