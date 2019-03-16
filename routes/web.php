@@ -11,6 +11,7 @@
 |
 */
 use \App\Mutter;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
 	$mutters = Mutter::orderBy('id','desc')->get();
@@ -21,6 +22,12 @@ Route::get('/', function () {
 
 Route::get('/mutter_demo', function(){
 	return view('new');
+});
+Route::get('/mutter', function(){
+	return view('select_user');
+});
+Route::post('/branch_select', function(Request $request){
+	return redirect("/new/".$request->nickname.'_post');
 });
 Route::get('/csrf_token', function(){
 	return [ 
