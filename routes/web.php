@@ -23,11 +23,11 @@ Route::get('/', function () {
 Route::get('/mutter_demo', function(){
 	return view('new');
 });
-// Route::get('/mutter', function(){
-// 	return view('select_user');
-// });
+Route::get('/mutter', function(){
+	return view('select_user');
+});
 Route::post('/branch_select', function(Request $request){
-	return redirect("/new/".$request->nickname.'_post');
+	return view($request->nickname."_post");
 });
 // Route::get('/aaa/', function(){
 // 	return view('new/_post');
